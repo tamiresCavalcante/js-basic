@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h1>Curso de Javascript</h1>
+    
+    <input type="text" id ="txtNome" value="digite" readonly>
+
+    <script>
+        var $txt = document.querySelector('#txtNome');
+        var nome = "Daniel ";
+        var sobrenome = "Tapias Morales";
+
+        document.querySelector('#txtNome').value = nome + sobrenome;
+
+    </script>
+    
+</body>
+</html>

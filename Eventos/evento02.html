@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Javascript</h1>
+
+        <button id="btn1" onclick="clicar()">Botão 1</button>
+        <button id="btn2">Botão 2</button>
+        <button id="btn3">Botão 3</button>
+    </div>
+
+    <script>
+        var btn2 = document.getElementById('btn2');
+        var btn3 = document.getElementById('btn3');
+
+        btn2.onclick = clicar;
+
+        function clicar(){
+            alert('clicou');
+            return function(){
+                alert('clicou 2');
+
+            }
+        }
+
+        btn3.addEventListener("click", function(){
+            alert('clicou com DOM');
+        })
+        btn3.onclick=function(){
+            alert('ola');
+            alert('mundo');
+        }
+        /*btn3.onclick=function(){
+            alert('mundo');
+        }*/
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <div id="output"></div>
+    
+</body>
+    <script>
+        var produtos = new Array('caneta', 'lapis','tesoura','borracha','caderno','livro');
+        produtos.push('compasso', 'cartolina')
+        var output = document.querySelector('#output');
+        //output.innerHTML = produtos.toString();
+        var msg = '';
+
+        for (var i = 0; i < produtos.length; i++){
+            msg += 'produto ' + (i+1) + ' : ' + produtos[i] + '<br>';
+        } 
+
+        output.innerHTML = msg;
+
+    </script>
+</html>

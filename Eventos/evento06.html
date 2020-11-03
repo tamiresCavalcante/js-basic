@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Javascript</h1>
+
+        <form action="#" method="POST">
+            <label for="txtUser">Usuário: </label><input type="text" id="txtUser" name="user">
+            <label for="txtPass">Senha: </label><input type="password" id="txtPass" name="pass">
+            <button type="submit" id="btn">Enviar</button>
+        </form>
+
+    </div>
+
+    <script>
+        (function(){
+            'use strict';
+            var $form = document.querySelector('form');
+            var $txtUser = document.getElementById('txtUser');
+            var $txtPass = document.getElementById('txtPass');
+            var $btn = document.getElementById('btn');
+
+            $form.addEventListener('submit', function(e){
+                if( !$txtUser.value || !$txtPass.value ){
+                    alert('Preeencha todos os campos');
+                    e.preventDefault();
+                }
+                
+            });
+
+        })()
+
+    </script>
+    
+</body>
+</html>

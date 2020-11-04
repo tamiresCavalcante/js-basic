@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Javascript</h1>
+
+        <input type="text" id="txtTask">
+        <button id="btn">Cadastrar Tarefa</button>
+        <ul>
+            <li>estudar javascript - DOM</li>
+            <li>estudar eventos em javascript</li>
+            <li>jogar video game</li>
+        </ul>
+
+    </div>
+
+    <script>
+
+(function(){
+    'use strict';
+
+    var $ul = document.querySelector('ul');
+    var $txtTask = document.querySelector('#txtTask');
+    var $btn = document.querySelector('#btn');
+
+    $btn.addEventListener('click', function(){
+        var task = '<li>' + $txtTask.value + '</li>';
+        $ul.innerHTML = $ul.innerHTML + task;
+
+        $txtTask.value = '';
+        $txtTask.focus();
+
+    })
+
+})();
+    </script>
+
+    
+</body>
+</html>
